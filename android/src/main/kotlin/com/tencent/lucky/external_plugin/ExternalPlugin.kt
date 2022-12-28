@@ -37,7 +37,7 @@ class ExternalPlugin: FlutterPlugin, MethodCallHandler {
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-    val arguments = call.arguments<Map<String,Int>>()
+    val arguments = call.arguments<Map<String,Int>>()!!
     when (call.method) {
       "create" -> {
         val width = arguments["width"]
